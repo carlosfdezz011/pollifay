@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pollifay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars"></canvas>
+
+<header>
+  <img src="logo.svg" class="logo glow">
+  <h1 class="glow-text">POLLIFAY</h1>
+  <p>Escucha el universo</p>
+</header>
+
+<section class="search">
+  <input id="search" placeholder="Buscar canción o artista">
+  <button onclick="buscar()">Buscar</button>
+</section>
+
+<section id="resultados"></section>
+<section id="player"></section>
+
+<section class="playlists">
+  <h2>🎧 Playlists</h2>
+  <input id="playlistName" placeholder="Nueva playlist">
+  <button onclick="crearPlaylist()">Crear playlist</button>
+  <div id="listaPlaylists"></div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

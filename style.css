@@ -1,0 +1,80 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: #d6ecff;
+  overflow-x: hidden;
+}
+
+canvas#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 90px;
+}
+
+.glow {
+  animation: pulse 4s infinite;
+}
+
+.glow-text {
+  color: #4fc3ff;
+  letter-spacing: 4px;
+  animation: glowText 3s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { filter: drop-shadow(0 0 5px #4fc3ff); }
+  50% { filter: drop-shadow(0 0 20px #1e90ff); }
+  100% { filter: drop-shadow(0 0 5px #4fc3ff); }
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 10px #1e90ff; }
+  to { text-shadow: 0 0 25px #4fc3ff; }
+}
+
+.search, .playlists {
+  padding: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 8px;
+  background: rgba(2,11,26,0.8);
+  border: 1px solid #0a3d62;
+  color: #4fc3ff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #0abde3, #1e90ff);
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.song {
+  padding: 12px;
+  border-bottom: 1px solid #0a3d62;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
